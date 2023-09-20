@@ -21,7 +21,8 @@
   <link rel="stylesheet" href="{{ asset('css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('images/stocklogo.png') }}" />
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
@@ -47,8 +48,8 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="images/stocklogo.png" class="mr-2" alt="logo"/></a>
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/stocklogo.png" alt="logo"/></a>
+        <a class="navbar-brand brand-logo mr-5" href="index.html"><img src="{{ asset('images/stocklogo.png')}}" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('images/stocklogo.png')}}" alt="logo"/></a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -305,31 +306,15 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('home') }}">
-              <i class="icon-grid menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-            </a>
-          </li>
-          {{-- <li class="nav-item">
+          @yield('sidebar')
+          {{--
+            <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Manage Branch</span>
             </a>
-          </li> --}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('unit.index') }}">
-              <i class="icon-paper menu-icon"></i>
-              <span class="menu-title">Manage Unit</span>
-            </a>
           </li>
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="#">
-              <i class="icon-paper menu-icon"></i>
-              <span class="menu-title">Manage Colour</span>
-            </a>
-          </li>
-          <li class="nav-item">
+            <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="icon-paper menu-icon"></i>
               <span class="menu-title">Manage Size</span>
