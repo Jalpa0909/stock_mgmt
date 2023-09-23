@@ -5,6 +5,7 @@ use App\Http\Controllers\UnitController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\SizeController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\BranchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +47,17 @@ Route::get('/brand', [App\Http\Controllers\BrandController::class, 'index'])->na
 Route::post('/brand/store', [App\Http\Controllers\BrandController::class, 'store'])->name('brand.store');
 Route::get('/brand/edit/{id}', [App\Http\Controllers\BrandController::class, 'edit'])->name('brand.edit');
 Route::get('/brand/delete/{id}', [BrandController::class, 'destroy'])->name('brand.delete');
+
+
+Route::get('/brand', [App\Http\Controllers\BrandController::class, 'index'])->name('brand.index');
+Route::post('/brand/store', [App\Http\Controllers\BrandController::class, 'store'])->name('brand.store');
+Route::get('/brand/edit/{id}', [App\Http\Controllers\BrandController::class, 'edit'])->name('brand.edit');
+Route::get('/brand/delete/{id}', [BrandController::class, 'destroy'])->name('brand.delete');
+
+Route::get('/branch', [App\Http\Controllers\BranchController::class, 'index'])->name('branch.index');
+Route::post('/branch/store', [App\Http\Controllers\BranchController::class, 'store'])->name('branch.store');
+Route::get('/branch/edit/{id}', [App\Http\Controllers\BranchController::class, 'edit'])->name('branch.edit');
+Route::get('/branch/delete/{id}', [BranchController::class, 'destroy'])->name('branch.delete');
 
 
 

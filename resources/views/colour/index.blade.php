@@ -32,6 +32,12 @@
         <span class="menu-title">Manage Brand</span>
     </a>
 </li>
+<li class="nav-item ">
+    <a class="nav-link " href="{{ route('branch.index') }}">
+        <i class="icon-paper menu-icon"></i>
+        <span class="menu-title">Manage Branch</span>
+    </a>
+</li>
 @endsection
 @if ($message = Session::get('success'))
 <div class="alert alert-success">
@@ -73,7 +79,7 @@
                     <div class="form-group row">
                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Title</label>
                         <div class="col-sm-9">
-                            <input type="title" id="title" class="form-control" id="exampleInputUsername2" placeholder="Please Enter Colour" name="title">
+                            <input type="text" id="title" class="form-control" id="exampleInputUsername2" placeholder="Please Enter Colour" name="title" required>
                         </div>
                     </div>
                 </div>

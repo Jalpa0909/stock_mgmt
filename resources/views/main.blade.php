@@ -32,5 +32,11 @@
         <span class="menu-title">Manage Brand</span>
     </a>
 </li>
+<li class="nav-item ">
+    <a class="nav-link " href="{{ route('branch.index') }}">
+        <i class="icon-paper menu-icon"></i>
+        <span class="menu-title">Manage Branch</span>
+    </a>
+</li>
 @endsection
 @endsection
